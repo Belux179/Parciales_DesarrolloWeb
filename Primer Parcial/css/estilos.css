@@ -31,6 +31,11 @@ h4{
 p{
   font-size: 1.5rem;
 }
+li{
+  font-size: 1.5rem;
+  list-style-type: square;
+  font-weight: bold;
+}
 
 /* header */
 .Logo img{
@@ -54,7 +59,7 @@ p{
   padding: 1rem 0 3rem 0;
 }
 .site-header.inicio{
-  background-image: url(../imgn/ima2.jpg);
+  background-image: url(../imgn/fondo.jpg);
   background-position: center center;
   background-size: cover;
   height: 65vh;
@@ -166,12 +171,19 @@ media (min-width:768px){
 /*Novedades*/
 .display-slider{
     background: rgba(227, 106, 0, 0.7);
+    min-width: 20rem;
 }
+.displa-art{
+  display: flex;
+}
+
 .icono {
   background: rgba(227, 106, 0, 1);
   padding: 1rem 1rem 1rem 1rem;
   margin: 1rem 1rem 1rem 1rem;
   display: flex;
+
+    border: 0.3rem solid #000000;
 }
 .seccion{
   margin-top: 2rem;
@@ -191,6 +203,8 @@ media (min-width:768px){
 }
 .icono img{
     max-height: 25rem;
+    padding: 0 1rem 0 1rem;
+
 }
 @media (min-width:768px){
     .icono{
