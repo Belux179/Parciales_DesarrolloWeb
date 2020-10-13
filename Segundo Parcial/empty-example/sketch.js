@@ -107,7 +107,11 @@ function draw() {
     
     let y = (RandomInput.length*2);
     let x=0;
+    let minm=25;
+    let maxm=0;
     for (let inputs of RandomInput) {
+        if(minm>inputs)minm=inputs;
+        if(maxm<inputs)maxm=inputs;
         do{
             if(x%2==0){
                 CUBE_T((w2+10)+(((w3-w2)/y)*x),h3,((w3-w2)/y)-5,h4/(25/inputs),inputs);
@@ -116,6 +120,15 @@ function draw() {
             x=x+1;
         }while(!(x%2==0));       
     }
+    strokeWeight(0);//borde letra 
+    fill(255);//color de letra
+    textSize(h/50);
+    text(("Min: "+minm.toString() ),
+    w4+(w/2.65)+(w4/60),(h/7));
+    text(("Max: "+maxm.toString() ),
+    w4+(w/2.65)+(w4/60),(h/9));
+    
+    
 }
 function GeneratRand(){
     let cantidad = RandomIntr(10);
